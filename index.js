@@ -5,7 +5,7 @@ require('dotenv').config()
 
 const emmiter = new events.EventEmitter()
 const app = express()
-app.use(express.json())
+// app.use(express.json())
 app.use(cors())
 
 

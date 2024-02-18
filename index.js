@@ -6,7 +6,7 @@ require('dotenv').config()
 const emmiter = new events.EventEmitter()
 const app = express()
 app.use(cors({
-    origin: '*'
+    origin: 'https://chat-backend-pi-liard.vercel.app/'
 }))
 app.use(express.json())
 

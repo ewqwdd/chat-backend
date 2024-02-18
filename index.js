@@ -5,12 +5,12 @@ require('dotenv').config()
 
 const emmiter = new events.EventEmitter()
 const app = express()
-// app.use(express.json())
 app.use(cors())
-
+app.use(express.json())
 
 app.get('/message', (req, res) => {
     emmiter.once('message', (message) => {
+        console.log(message)
         return res.json(message)
     })
 })

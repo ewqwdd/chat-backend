@@ -1,11 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const events = require('events')
+const bodyParser = require('body-parser')
 require('dotenv').config()
 
 const emmiter = new events.EventEmitter()
 const app = express()
 app.use(cors())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.json())
 
 app.get('/message', (req, res) => {
@@ -29,6 +31,9 @@ app.get('/event-soursing/connect', (req, res) => {
 
 app.post('/test', (req) => {
     console.log(req.body)
+    console.log(req.params)
+    console.log(req.query)
+    console.log(req)
 })
 
 app.post('/message', (req, res) => {

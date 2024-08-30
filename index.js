@@ -30,10 +30,9 @@ app.get('/event-soursing/connect', (req, res) => {
 })
 
 app.post('/test', (req) => {
-    console.log(req.body)
-    console.log(req.params)
-    console.log(req.query)
-    console.log(req)
+    console.log('b: ',req.body)
+    console.log('p: ',req.params)
+    console.log('q: ', req.query)
 })
 
 app.post('/message', (req, res) => {

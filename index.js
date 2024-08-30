@@ -27,6 +27,10 @@ app.get('/event-soursing/connect', (req, res) => {
     
 })
 
+app.post('/test', (req) => {
+    console.log(req.body)
+})
+
 app.post('/message', (req, res) => {
     const message = req.body
     emmiter.emit('message', message)
